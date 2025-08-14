@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Website Title -->
+    <title>Tesson Energy</title>
+
+    <!-- Website Fevicon -->
+    <link rel="shortcut icon" href="./assets/images/fevicon.png" type="image/x-icon">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Remix Icon CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="assets/images/logo_white.png" alt="Tesson Logo" class="me-2">
+            </a>
+
+            <!-- Toggle button (mobile) -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+                aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navbar Links -->
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+
+                    <!-- Dropdown for Products -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link active dropdown-toggle" id="productsDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Products
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="productsDropdown">
+                            <li><a class="dropdown-item" href="e-mobility.html">E-Mobility</a></li>
+                            <li><a class="dropdown-item" href="ess.html">Energy Storage System(ESS)</a></li>
+                            <li><a class="dropdown-item" href="agriculture.html">Agriculture & Field applications
+                                    batteries</a></li>
+                            <li><a class="dropdown-item" href="chargers.html">Chargers</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="technology.html">Technology</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link blink" href="enquiry.html">Enquiry</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ESS HERO -->
+    <section class="py-5 bg-secondary">
+        <div class="container">
+            <div class="row align-items-center flex-column-reverse flex-md-row">
+                <!-- Text content -->
+                <div class="col-md-6 text-center text-md-start">
+                    <h1 class="text-brand fw-bold mb-3">
+                        Energy Storage Systems
+                    </h1>
+                    <p class="text-light mb-4">
+                        Reliable and long-lasting Lithium-ion batteries optimized for hybrid and backup inverter
+                        systems.
+                        Ideal for residential, commercial, and industrial energy storage applications.
+                    </p>
+                    <a href="enquiry.html" class="btn btn-outline-brand px-4 py-2">Enquire Now</a>
+                </div>
+
+                <!-- Hero Image -->
+                <div class="col-md-6 text-center mb-4 mb-md-0">
+                    <img src="assets/images/products/ess-hero.png" alt="ESS Battery" class="img-fluid" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ESS FEATURES SECTION -->
+    <section class="section-padding bg-light">
+        <div class="container">
+            <div class="row g-4">
+                <!-- Hybrid Inverter Feature -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border-0 bg-dark text-center p-4">
+                        <div class="mb-3">
+                            <i class="ri-sun-line fs-1 text-brand"></i>
+                        </div>
+                        <h5 class="text-white fw-bold mb-2">Solar + Grid Integration</h5>
+                        <p class="text-white-50 mb-0">
+                            Hybrid inverters efficiently combine solar and grid power for seamless energy management.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Backup Inverter Feature -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border-0 bg-dark text-center p-4">
+                        <div class="mb-3">
+                            <i class="ri-battery-charge-line fs-1 text-brand"></i>
+                        </div>
+                        <h5 class="text-white fw-bold mb-2">Uninterrupted Power</h5>
+                        <p class="text-white-50 mb-0">
+                            Backup inverters ensure a smooth switchover to stored energy during power outages.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- ESS Batteries Feature -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border-0 bg-dark text-center p-4">
+                        <div class="mb-3">
+                            <i class="ri-battery-2-charge-line fs-1 text-brand"></i>
+                        </div>
+                        <h5 class="text-white fw-bold mb-2">High Capacity Storage</h5>
+                        <p class="text-white-50 mb-0">
+                            Advanced lithium batteries designed for long life and high energy storage efficiency.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Smart Monitoring Feature -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border-0 bg-dark text-center p-4">
+                        <div class="mb-3">
+                            <i class="ri-dashboard-line fs-1 text-brand"></i>
+                        </div>
+                        <h5 class="text-white fw-bold mb-2">Smart Monitoring</h5>
+                        <p class="text-white-50 mb-0">
+                            Real-time performance tracking with mobile app & web-based monitoring options.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Energy Efficiency Feature -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border-0 bg-dark text-center p-4">
+                        <div class="mb-3">
+                            <i class="ri-lightbulb-flash-line fs-1 text-brand"></i>
+                        </div>
+                        <h5 class="text-white fw-bold mb-2">High Efficiency</h5>
+                        <p class="text-white-50 mb-0">
+                            Optimized power conversion reduces energy loss and maximizes system output.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Scalable Solutions Feature -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border-0 bg-dark text-center p-4">
+                        <div class="mb-3">
+                            <i class="ri-stack-line fs-1 text-brand"></i>
+                        </div>
+                        <h5 class="text-white fw-bold mb-2">Scalable Solutions</h5>
+                        <p class="text-white-50 mb-0">
+                            Flexible system configurations to meet residential, commercial, and industrial needs.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding bg-dark">
+        <!-- HYBRID SOLAR INVERTER PRODUCT -->
+        <div class="container mb-5">
+            <div class="row align-items-center">
+                <div class="col-lg-6 text-center mb-4 mb-lg-0">
+                    <img src="assets/images/products/hybrid-inverter.png" alt="ESS Inverter" class="img-fluid"
+                        width="75%">
+                </div>
+                <div class="col-lg-6">
+                    <h3 class="text-brand fw-bold mb-3">Hybrid Solar Inverter</h3>
+                    <p class="text-white mb-4">
+                        Our high-performance hybrid inverters deliver reliable power conversion for residential and
+                        commercial energy storage systems.
+                        Designed for maximum efficiency, versatile battery compatibility, and seamless integration with
+                        solar, mains, and generator inputs.
+                    </p>
+                    <a href="assets/pdf/Hybrid-Inverters.pdf" class="btn btn-outline-brand px-4 me-2">Datasheet <i
+                            class="ri-download-cloud-line"></i></a>
+                    <a href="enquiry.html" class="btn btn-light">ENQUIRY NOW</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- INVERTER FEATURES -->
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-6 d-flex align-items-start">
+                    <div class="icon-box me-3 text-brand fs-3">
+                        <i class="ri-flashlight-line"></i>
+                    </div>
+                    <div>
+                        <h6 class="fw-bold mb-1 text-white">High Efficiency</h6>
+                        <p class="mb-0 text-white-50">Pure sine wave high frequency solar inverter with low no-load
+                            loss.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 d-flex align-items-start">
+                    <div class="icon-box me-3 text-brand fs-3">
+                        <i class="ri-sun-line"></i>
+                    </div>
+                    <div>
+                        <h6 class="fw-bold mb-1 text-white">MPPT Integrated Design</h6>
+                        <p class="mb-0 text-white-50">MPPT solar charge controller + inverter combo — market’s most
+                            popular design.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 d-flex align-items-start">
+                    <div class="icon-box me-3 text-brand fs-3">
+                        <i class="ri-battery-2-charge-line"></i>
+                    </div>
+                    <div>
+                        <h6 class="fw-bold mb-1 text-white">Flexible Battery Support</h6>
+                        <p class="mb-0 text-white-50">Configurable for lead-acid, lithium-ion, gel, and other battery
+                            types.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 d-flex align-items-start">
+                    <div class="icon-box me-3 text-brand fs-3">
+                        <i class="ri-plug-line"></i>
+                    </div>
+                    <div>
+                        <h6 class="fw-bold mb-1 text-white">Multiple Power Inputs</h6>
+                        <p class="mb-0 text-white-50">Supports solar, mains, and generator input with stable voltage
+                            output.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 d-flex align-items-start">
+                    <div class="icon-box me-3 text-brand fs-3">
+                        <i class="ri-home-smile-line"></i>
+                    </div>
+                    <div>
+                        <h6 class="fw-bold mb-1 text-white">Battery-Free Option</h6>
+                        <p class="mb-0 text-white-50">Can work off-grid without a battery to reduce system cost.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 d-flex align-items-start">
+                    <div class="icon-box me-3 text-brand fs-3">
+                        <i class="ri-remote-control-line"></i>
+                    </div>
+                    <div>
+                        <h6 class="fw-bold mb-1 text-white">Remote Monitoring</h6>
+                        <p class="mb-0 text-white-50">RS485 port / mobile app option for convenient monitoring.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BATTERY BACKUP INVERTER (UPS) PRODUCT -->
+    <section class="section-padding bg-secondary">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 text-center mb-4 mb-lg-0">
+                    <img src="assets/images/products/hybrid-inverter.png" alt="Battery Backup Inverter (UPS)"
+                        class="img-fluid" width="75%">
+                </div>
+                <div class="col-lg-6">
+                    <h3 class="text-brand fw-bold mb-3">Battery Backup Inverter (UPS)</h3>
+                    <p class="text-white mb-4">
+                        Our Battery Backup Inverters (UPS) ensure uninterrupted power for homes, offices, and critical
+                        equipment.
+                        Designed for quick switchover, reliable performance, and compatibility with multiple battery
+                        technologies,
+                        they deliver stable power during outages and protect your devices from fluctuations.
+                    </p>
+                    <ul class="text-white mb-4">
+                        <li>Automatic switchover to battery during power outages</li>
+                        <li>Pure sine wave output for sensitive electronics</li>
+                        <li>Fast charging with high efficiency</li>
+                        <li>Compact and low-noise operation</li>
+                    </ul>
+                    <a href="assets/pdf/Battery-Backup-Inverters.pdf" class="btn btn-outline-brand px-4 me-2">
+                        Datasheet <i class="ri-download-cloud-line"></i>
+                    </a>
+                    <a href="enquiry.html" class="btn btn-light">ENQUIRY NOW</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BATTERY FOR INVERTERS -->
+    <section class="section-padding bg-dark">
+        <div class="container mb-5">
+            <div class="row align-items-center">
+                <div class="col-lg-6 text-center mb-4 mb-lg-0">
+                    <img src="assets/images/products/inverter-batteries.png" alt="Battery for Inverters"
+                        class="img-fluid" width="75%">
+                </div>
+                <div class="col-lg-6">
+                    <h3 class="text-white fw-bold mb-3">
+                        <span class="text-brand">High-Performance Battery</span> for Inverter & Backup Systems
+                    </h3>
+                    <p class="text-white mb-4">
+                        Our inverter-compatible batteries deliver reliable, long-lasting power for residential,
+                        commercial,
+                        and industrial backup systems. Designed for deep-cycle performance, fast charging, and extended
+                        lifespan, they ensure uninterrupted energy supply during power outages and support seamless
+                        integration
+                        with solar hybrid inverters.
+                    </p>
+                    <a href="/assets/pdf/Field-Application-Battery.pdf" class="btn btn-outline-brand px-4 me-2">
+                        Datasheet <i class="ri-download-cloud-line"></i>
+                    </a>
+                    <a href="enquiry.html" class="btn btn-light">ENQUIRY NOW</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="table-responsive">
+                <table class="table table-bordered align-middle custom-table">
+                    <tbody>
+                        <tr>
+                            <th>Voltage Range</th>
+                            <td>48V / 52V / 60V / 74V</td>
+                        </tr>
+                        <tr>
+                            <th>Capacity Range</th>
+                            <td>25-50Ah</td>
+                        </tr>
+                        <tr>
+                            <th>High Energy Density</th>
+                            <td>Lightweight &amp; compact design</td>
+                        </tr>
+                        <tr>
+                            <th>Built-in BMS</th>
+                            <td>Active Balance Intelligent Battery Management System for safety</td>
+                        </tr>
+                        <tr>
+                            <th>Wide Operating Temperature</th>
+                            <td>-20°C to 60°C</td>
+                        </tr>
+                        <tr>
+                            <th>Efficient Heat Transfer</th>
+                            <td>1-5 W/m·K</td>
+                        </tr>
+                        <tr>
+                            <th>IP Rated Enclosure</th>
+                            <td>IP67</td>
+                        </tr>
+                        <tr>
+                            <th>Modular &amp; Scalable Design</th>
+                            <td>Custom configuration</td>
+                        </tr>
+                        <tr>
+                            <th>Compatible Applications</th>
+                            <td>E-2Wheeler, E-3Wheeler</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-5 bg-secondary text-white text-center text-md-start">
+        <div class="container">
+            <div class="row align-items-center">
+
+                <!-- Text Content -->
+                <div class="col-md-8 mb-4 mb-md-0">
+                    <h2 class="fw-bold text-brand mb-3">
+                        Ready to make an enquiry?
+                    </h2>
+                    <p class="mb-0">
+                        Connect with <span class="text-brand">Tesson Energy</span> to explore our high-performance
+                        lithium battery solutions. Your sustainable energy journey starts here.
+                    </p>
+                </div>
+
+                <!-- CTA Button -->
+                <div class="col-md-4 text-md-end">
+                    <a href="enquiry.html" class="btn btn-outline-brand btn-lg">Enquire Now</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CERTIFICATES -->
+    <section class="py-5 bg-white">
+        <div class="container">
+            <div class="row text-center mb-4">
+                <div class="col">
+                    <h2 class="fw-bold">Global Standards & Certifications</h2>
+                    <p class="text-muted">
+                        Our battery packs are rigorously tested and certified for safety, efficiency, and environmental
+                        compliance.
+                    </p>
+                </div>
+            </div>
+
+            <div class="d-flex flex-wrap justify-content-center align-items-center gap-4">
+                <img src="assets/images/technology/ISO.png" alt="ISO" class="img-fluid" style="max-height: 80px;">
+                <img src="assets/images/technology/RoHS.png" alt="RoHS" class="img-fluid" style="max-height: 80px;">
+                <img src="assets/images/technology/IEC.png" alt="IEC" class="img-fluid" style="max-height: 80px;">
+                <img src="assets/images/technology/UL.png" alt="UL" class="img-fluid" style="max-height: 80px;">
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <div id="footer-area"></div>
+
+    <!-- FLOATING BUTTONS -->
+    <div id="floating-buttons-area"></div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <!-- External JS -->
+    <script src="/js/script.js"></script>
+</body>
+
+</html>

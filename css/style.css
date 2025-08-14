@@ -1,0 +1,535 @@
+/* ========================== VARIABLES ========================== */
+:root {
+    --font-base: "Poppins", sans-serif;
+    --color-dark: #000000;
+    --color-body: #727272;
+    --color-brand: #C5FF00;
+    --color-brand-light: #C5FF00;
+    --color-brand-rgb: 197, 255, 0;
+    --box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.08);
+    --transition: all 0.5s ease;
+}
+
+/* ========================== RESET & BASE ========================== */
+body {
+    font-family: var(--font-base);
+    line-height: 1.7;
+    color: var(--color-body);
+    background-color: #fff;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-brand);
+}
+
+a:hover {
+    color: var(--color-brand-light);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 600;
+    color: var(--color-dark);
+}
+
+.text-brand {
+    color: var(--color-brand);
+}
+
+.bg-brand {
+    background-color: var(--color-brand);
+    color: black;
+}
+
+/* ========================== UTILITIES ========================== */
+.section-padding {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.section-title {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 40px auto;
+}
+
+.section-title h6 {
+    color: var(--color-brand);
+}
+
+.theme-shadow {
+    box-shadow: var(--box-shadow);
+}
+
+/* ========================== BUTTONS ========================== */
+.btn {
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    border-radius: 0;
+    padding: 10px 24px;
+}
+
+.btn-brand {
+    background-color: var(--color-brand);
+    border-color: var(--color-brand);
+    color: white;
+}
+
+.btn-brand:hover {
+    background-color: var(--color-brand-light);
+    border-color: var(--color-brand-light);
+    color: black;
+}
+
+.btn-outline-brand {
+    background-color: transparent;
+    color: var(--color-brand);
+    border: 2px solid var(--color-brand);
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.btn-outline-brand:hover {
+    background-color: var(--color-brand);
+    border-color: var(--color-brand);
+    color: #000;
+}
+
+.border-brand {
+    border-color: var(--color-brand) !important;
+}
+
+/* ========================== CARD ========================== */
+.card-move-up {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-move-up:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* ========================== NAVBAR ========================== */
+.navbar {
+    box-shadow: var(--box-shadow);
+    background-color: #000000;
+}
+
+.navbar-brand img {
+    height: 40px;
+}
+
+.navbar-nav .nav-link {
+    font-weight: 600;
+    color: #ffffff;
+    margin-left: 15px;
+    position: relative;
+    transition: var(--transition);
+}
+
+/* Hover + active */
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: var(--color-brand-light);
+}
+
+/* Dropdown menu style */
+.dropdown-menu {
+    background-color: #111;
+    border: none;
+    padding: 10px 0;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-menu .dropdown-item {
+    color: #ffffff;
+    padding: 10px 20px;
+    transition: var(--transition);
+}
+
+.dropdown-menu .dropdown-item:hover {
+    background-color: var(--color-brand-light);
+    color: #000;
+}
+
+/* Hover open dropdown on desktop */
+@media (min-width: 992px) {
+    .navbar .dropdown:hover .dropdown-menu {
+        display: block;
+        margin-top: 0;
+        animation: fadeDown 0.3s ease-in-out;
+    }
+}
+
+/* Animation for dropdown */
+@keyframes fadeDown {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.blink {
+    animation: blinkText 0.7s infinite;
+    transition: opacity 0.2s ease;
+}
+
+.blink:hover {
+    animation: none;
+    opacity: 1 !important;
+}
+
+@keyframes blinkText {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.4;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/* ========================== FOOTER ========================== */
+
+footer {
+    padding-top: 80px;
+}
+
+.footer-top {
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgb(255, 255, 255, 0.1);
+}
+
+.footer-bottom {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+footer li,
+footer p,
+footer a {
+    color: rgb(255, 255, 255, 0.7);
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer .line {
+    width: 45px;
+    height: 4px;
+    background-color: var(--color-brand);
+    margin-top: 12px;
+    margin-bottom: 24px;
+}
+
+.social-icons a {
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255, 255, 255, 0.1);
+    border-radius: 100px;
+}
+
+.social-icons a:hover {
+    background-color: var(--color-brand);
+    color: black;
+}
+
+.footer-icon {
+    color: var(--color-brand);
+}
+
+footer .form-control:focus {
+    outline: none;
+    box-shadow: none;
+    border-color: var(--color-brand-light);
+}
+
+
+
+.about-hero {
+    background: linear-gradient(to bottom right, rgba(1, 34, 66, 0.8), rgba(0, 0, 0, 0.8)),
+        url('/assets/images/about-hero.jpg') no-repeat center center;
+    background-size: cover;
+    color: #fff;
+}
+
+.text-highlight {
+    color: var(--color-brand-light);
+}
+
+@media (max-width: 767.98px) {
+    .about-hero {
+        text-align: center;
+        padding-top: 60px;
+    }
+
+    .about-hero h1 {
+        font-size: 2rem;
+    }
+}
+
+.icon-circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ========================== ENQUIRY PAGE ========================== */
+
+#enquiry {
+    position: relative;
+    z-index: 2;
+}
+
+#enquiry::after {
+    content: "";
+    width: 100%;
+    height: 70%;
+    background: url(../assets/images/enquiry.jpg);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+#enquiryForm .form-control,
+.form-select {
+    border-radius: 0;
+}
+
+#enquiryForm .form-control:focus,
+.form-select:focus {
+    box-shadow: none;
+    border-color: var(--color-brand);
+}
+
+.map-container {
+    width: 100%;
+    border-radius: 8px;
+    margin: 20px 0 20px 0;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 360px;
+    border: 0;
+}
+
+/* ========================== INDEX PAGE ========================== */
+
+.hero-section {
+    height: 100vh;
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        height: 80vh;
+    }
+}
+
+.object-fit-cover {
+    object-fit: cover;
+    object-position: center;
+}
+
+
+/* ABOUT */
+#about {
+    position: relative;
+    z-index: 1;
+}
+
+#about::before {
+    content: "";
+    width: 30%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #6e6e6e;
+    /* Darker shade */
+    z-index: 0;
+}
+
+#about .container,
+#about .row,
+#about .col-lg-5,
+#about .col-lg-5 img,
+#about .col-lg-5.offset-lg-1 {
+    position: relative;
+    z-index: 1;
+}
+
+@media (max-width: 992px) {
+    #about::before {
+        height: 40%;
+        width: 100%;
+    }
+}
+
+/* OUR SOLUTIONS */
+.category-img img {
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+    transition: transform 0.4s ease;
+}
+
+/* Optional subtle zoom on image hover */
+.category-img img:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease-in-out;
+}
+
+
+.btn-outline-brand {
+    border: 2px solid var(--color-brand-light);
+    color: var(--color-brand-light);
+}
+
+.btn-outline-brand:hover {
+    background-color: var(--color-brand-light);
+    color: #000;
+}
+
+/* Glass card style */
+.glass-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.glass-card:hover {
+    background: rgba(255, 255, 255, 0.08);
+    transform: translateY(-5px);
+}
+
+/* Button brand styling */
+.btn-outline-brand {
+    border-color: #C5FF00;
+    color: #C5FF00;
+}
+
+.btn-outline-brand:hover {
+    background-color: #C5FF00;
+    color: #000;
+}
+
+/* FAQ */
+.accordion-button:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+/* ========================== PRODUCTS PAGE ========================== */
+
+.feature-icon {
+    color: var(--color-brand);
+    font-size: 3rem !important;
+}
+
+.custom-table {
+    background-color: transparent !important;
+}
+
+.custom-table th,
+.custom-table td {
+    background-color: transparent !important;
+    border: 1px solid white !important;
+    color: white;
+}
+
+.custom-table th {
+    background-color: transparent;
+    font-weight: bold;
+    color: var(--color-brand);
+}
+
+.td-bold {
+    color: var(--color-brand) !important;
+}
+
+/* ========================== FLOATING BUTTONS ========================== */
+
+/* Floating Buttons Container */
+.floating-buttons {
+    position: fixed;
+    right: 15px;
+    bottom: 20%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    z-index: 9999;
+}
+
+/* Each Button */
+.fab-btn {
+    background: #000;
+    color: #fff;
+    font-size: 22px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transition: background 0.3s;
+}
+
+/* Button Hover Effects */
+.fab-btn:hover {
+    color: #000;
+}
+
+/* Color Themes */
+.whatsapp-btn { background: #1ebe57; }
+.call-btn { background: #0d6efd; }
+.email-btn { background: #ff9800; }
+
+/* Responsive */
+@media (max-width: 768px) {
+    .fab-btn {
+        width: 45px;
+        height: 45px;
+        font-size: 20px;
+    }
+}
