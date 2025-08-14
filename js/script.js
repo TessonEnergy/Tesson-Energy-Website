@@ -66,39 +66,3 @@ function attachFooterFormHandler() {
         }
     });
 }
-
-// ----- ENQUIRY FORM -----
-const APP_Url = 'https://script.google.com/macros/library/d/15AvibxZJkpigo8MNlr4Ed0qeQSAhTrVuA2nBgY2tOs9i5ohvYJYvRgZk/1https://script.google.com/macros/s/AKfycbze_j6vNSRa_T86QU5KnPoQacEGw8JvD73uRT8cNlwpA_4W9IcJwehk3jKWMeOWMwX-/exec';
-
-document.getElementById('enquiryForm').addEventListener('submit', async function(e) {
-    e.preventDefault();
-    const form = e.target;
-    const btn = form.querySelector('button[type="submit"]');
-    const originalText = btn.textContent;
-    btn.disabled = true;
-    btn.textContent = 'Sending...';
-
-    const fd = new FormData(form);
-
-    // Multiple checkboxes → join values
-    if (form.querySelectorAll('input[name="application"]:checked').length > 0) {
-        const apps = Array.from(form.querySelectorAll('input[name="application"]:checked')).map(el => el.value);
-        fd.set('application', apps.join(', '));
-    }
-
-    try {
-        const res = await fetch(APP_Url, { method: 'POST', body: fd });
-        const data = await res.json();
-        if (data.ok) {
-            alert('Thanks! We will get back to you soon.');
-            form.reset();
-        } else {
-            alert('Error: ' + data.message);
-        }
-    } catch (err) {
-        alert('Something went wrong!');
-    } finally {
-        btn.disabled = false;
-        btn.textContent = originalText;
-    }
-});
