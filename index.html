@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <!-- Website Title -->
     <title>Tesson Energy</title>
 
     <!-- Website Fevicon -->
-    <link rel="shortcut icon" href="./img/fevicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./assets/images/fevicon.png" type="image/x-icon">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
 
     <!-- Bootstrap CSS -->
@@ -26,72 +28,435 @@
     <!-- External CSS -->
     <link rel="stylesheet" href="./css/style.css">
 
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #cbccce;
-            text-align: center;
-        }
-        .progress-container {
-            max-width: 600px;
-            padding: 20px;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-        }
-        img {
-            margin-top: 10px;
-            margin-bottom: 10px;
-        }
-    </style>
 </head>
+
 <body>
     <!-- NAVBAR -->
-    <!-- <nav id="navbar" class="navbar navbar-expand-lg bg-white sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
         <div class="container">
-            <a class="navbar-brand" href="index.html">
-                <img src="./img/logo.png" alt="Tesson Energy Logo" width="150px">
+            <!-- Logo -->
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="assets/images/logo_white.png" alt="Tesson Logo" class="me-2">
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+
+            <!-- Toggle button (mobile) -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+                aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
+
+            <!-- Navbar Links -->
+            <div class="collapse navbar-collapse" id="mainNavbar">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Home</a>
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+
+                    <!-- Dropdown for Products -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="productsDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Products
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="productsDropdown">
+                            <li><a class="dropdown-item" href="e-mobility.html">E-Mobility</a></li>
+                            <li><a class="dropdown-item" href="ess.html">Energy Storage System(ESS)</a></li>
+                            <li><a class="dropdown-item" href="agriculture.html">Agriculture & Field applications
+                                    batteries</a></li>
+                            <li><a class="dropdown-item" href="chargers.html">Chargers</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="technology.html">Technology</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Products</a>
+                        <a class="nav-link" href="about.html">About Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Technology</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Careers</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">About Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contact Us</a>
+                        <a class="nav-link blink" href="enquiry.html">Enquiry</a>
                     </li>
                 </ul>
             </div>
         </div>
-    </nav> -->
+    </nav>
 
-    <div class="progress-container">
-        <img src="img/logo.png" alt="logo" width="50%">
-        <h1 class="text-primary">Website Under Construction</h1>
-        <p class="text-muted">We are working hard to bring you something amazing. Stay tuned!</p>
-        <div class="spinner-border text-primary" role="status">
-            <span class="visually-hidden">Loading...</span>
+    <!-- HERO -->
+    <section class="hero-section d-flex align-items-center text-white position-relative overflow-hidden">
+        <!-- Background Video -->
+        <div class="position-absolute top-0 start-0 w-100 h-100 z-n1">
+            <video src="assets/videos/battery-manufacturing-process.mp4" autoplay muted loop playsinline
+                class="w-100 h-100 object-fit-cover"></video>
+            <div class="position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(0, 0, 0, 0.7);">
+            </div>
         </div>
-    </div>
+
+        <!-- Content -->
+        <div class="container h-100">
+            <div class="row h-100">
+                <div
+                    class="col-12 d-flex flex-column justify-content-center align-items-center align-items-lg-start text-center text-lg-start h-100">
+                    <h1 class="display-4 fw-bold mb-3 text-white">
+                        Smarter Energy for <br class="d-none d-md-block"><span class="text-brand">Smarter World</span>
+                    </h1>
+                    <p class="lead text-white-50 mb-4 px-2 px-md-0" style="max-width: 700px;">
+                        High-performance lithium battery solutions tailored for EVs, energy storage, and industrial
+                        applications.
+                    </p>
+                    <div class="d-flex flex-column flex-sm-row gap-3">
+                        <a href="about.html" class="btn btn-outline-brand">Learn More</a>
+                        <a href="/enquiry.html" class="btn btn-outline-light">Get Quote</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section-padding bg-secondary" id="about">
+        <div class="container">
+            <div class="row align-items-center gy-5">
+                <div class="col-lg-5">
+                    <img src="/assets/images/index-about.png" alt="about-image">
+                </div>
+                <div class="col-lg-5 offset-lg-1">
+                    <h1 class="mt-3 mb-4 text-light">We are crafting a future beyond expectations.</h1>
+                    <p class="mb-4 text-light" style="text-align: justify;">
+                        Welcome to <strong class="text-brand">TESSON ENERGY</strong>, a leading manufacturer of
+                        high-performance lithium
+                        batteries. We design and deliver efficient, long-lasting, and fast-charging energy solutions for
+                        electric vehicles, renewable storage, and industrial needs. Driven by innovation and a
+                        commitment to sustainability, we empower a cleaner, greener future with safe and dependable
+                        power solutions.
+                    </p>
+                    <a href="/about.html" class="btn btn-outline-brand">Know more</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EV BATTERY PRODUCTS -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row align-items-center flex-lg-row flex-column-reverse">
+
+                <!-- Content -->
+                <div class="col-lg-6 text-center text-lg-start mt-4 mt-lg-0">
+                    <h2 class="fw-bold mb-3">EV Lithium-ion Batteries</h2>
+                    <p class="mb-4">
+                        Experience the power of Tesson Energy’s high-performance Lithium-ion batteries.
+                        Available in NMC and LFP chemistries, our EV battery solutions are designed for
+                        durability, efficiency, and safety.
+                    </p>
+                    <div class="d-flex justify-content-center justify-content-lg-start gap-3 flex-wrap">
+                        <a href="/assets/pdf/NMC-Series.pdf" target="_blank" class="btn btn-dark px-4">NMC Brochure</a>
+                        <a href="/assets/pdf/LFP-Series.pdf" target="_blank" class="btn btn-outline-dark px-4">LFP
+                            Brochure</a>
+                    </div>
+                </div>
+
+                <!-- Image -->
+                <div class="col-lg-6 text-center">
+                    <img src="/assets/images/products/product-lineup.png" alt="EV Batteries" class="img-fluid">
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- OUR SOLUTIONS -->
+    <section class="section-padding bg-dark text-white" id="product-categories">
+        <div class="container">
+            <div class="section-title text-center mb-5">
+                <h2 class="text-white">Explore Our Solutions</h2>
+                <p class="text-white-50">From mobility to energy storage, we power your world with precision.</p>
+            </div>
+
+            <!-- 1. E-Mobility -->
+            <div class="row align-items-center mb-5">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <a href="e-mobility.html" class="text-decoration-none">
+                        <h3 class="text-brand mb-3">E-Mobility</h3>
+                    </a>
+                    <p class="text-white">High-performance batteries tailored for electric two-wheelers,
+                        three-wheelers, and lightweight vehicles—empowering urban mobility.</p>
+                    <a href="e-mobility.html" class="btn btn-outline-brand mt-3">Know More</a>
+                </div>
+                <div class="col-lg-6">
+                    <a href="e-mobility.html">
+                        <div class="category-img rounded-4 overflow-hidden">
+                            <img src="assets/images/e-mobility.png" class="img-fluid w-100 h-100 object-fit-cover"
+                                alt="E-Mobility">
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 2. Energy Storage -->
+            <div class="row align-items-center flex-lg-row-reverse mb-5">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <a href="ess.html" class="text-decoration-none">
+                        <h3 class="text-brand mb-3">Energy Storage Systems</h3>
+                    </a>
+                    <p class="text-white">Scalable ESS solutions that store and deliver clean energy for residential,
+                        commercial, and industrial backup applications.</p>
+                    <a href="ess.html" class="btn btn-outline-brand mt-3">Know More</a>
+                </div>
+                <div class="col-lg-6">
+                    <a href="ess.html">
+                        <div class="category-img rounded-4 overflow-hidden">
+                            <img src="assets/images/ess-category.png" class="img-fluid w-100 h-100 object-fit-cover"
+                                alt="ESS">
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 3. Agriculture -->
+            <div class="row align-items-center mb-5">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <a href="agriculture.html" class="text-decoration-none">
+                        <h3 class="text-brand mb-3">Agriculture & Field Applications</h3>
+                    </a>
+                    <p class="text-white">Reliable battery systems engineered for outdoor equipment, irrigation
+                        systems, and remote agricultural tech—built to endure.</p>
+                    <a href="agriculture.html" class="btn btn-outline-brand mt-3">Know More</a>
+                </div>
+                <div class="col-lg-6">
+                    <a href="agriculture.html">
+                        <div class="category-img rounded-4 overflow-hidden">
+                            <img src="assets/images/agriculture.png" class="img-fluid w-100 h-100 object-fit-cover"
+                                alt="Agriculture">
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 4. Chargers -->
+            <div class="row align-items-center flex-lg-row-reverse">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <a href="chargers.html" class="text-decoration-none">
+                        <h3 class="text-brand mb-3">Chargers</h3>
+                    </a>
+                    <p class="text-white">Fast-charging, intelligent chargers for our lithium battery
+                        systems—ensuring long cycle life and rapid energy top-ups.</p>
+                    <a href="chargers.html" class="btn btn-outline-brand mt-3">Know More</a>
+                </div>
+                <div class="col-lg-6">
+                    <a href="chargers.html">
+                        <div class="category-img rounded-4 overflow-hidden">
+                            <img src="assets/images/charger.png" class="img-fluid w-100 h-100 object-fit-cover"
+                                alt="Chargers">
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-5 bg-secondary text-white text-center text-md-start">
+        <div class="container">
+            <div class="row align-items-center">
+
+                <!-- Text Content -->
+                <div class="col-md-8 mb-4 mb-md-0">
+                    <h2 class="fw-bold text-brand mb-3">
+                        Ready to make an enquiry?
+                    </h2>
+                    <p class="mb-0">
+                        Connect with <span class="text-brand">Tesson Energy</span> to explore our high-performance
+                        lithium battery solutions. Your sustainable energy journey starts here.
+                    </p>
+                </div>
+
+                <!-- CTA Button -->
+                <div class="col-md-4 text-md-end">
+                    <a href="enquiry.html" class="btn btn-outline-brand btn-lg">Enquire Now</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- TECHNOLOGY HIGHLIGHTS -->
+    <section class="section-padding bg-dark text-white" id="technology">
+        <div class="container">
+
+            <!-- Main Product Feature -->
+            <div class="row align-items-center mb-4">
+                <!-- Image -->
+                <div class="col-lg-6 mb-lg-0">
+                    <a href="e-mobility.html">
+                        <div class="category-img rounded-4 overflow-hidden">
+                            <img src="assets/images/tech.png" alt="Lithium-ion EV Battery"
+                                class="img-fluid w-100 h-100 object-fit-cover">
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Content -->
+                <div class="col-lg-6">
+                    <a href="technology.html" class="text-decoration-none">
+                        <h3 class="text-white mb-3">Our <span class="text-brand">Advanced Technology</span> for Battery
+                        </h3>
+                    </a>
+                    <p class="text-white">
+                        Our EV batteries are built with cutting-edge NMC chemistry, offering high energy density, long
+                        cycle life, and rapid charging capabilities. Designed for maximum safety, performance, and
+                        reliability—perfect for today's demanding e-mobility applications.
+                    </p>
+                    <ul class="text-white">
+                        <li>🔋 Fast-charging & high cycle life</li>
+                        <li>⚡ Enhanced thermal management system</li>
+                        <li>🚗 Optimized for two-, three-, and four-wheel EVs</li>
+                    </ul>
+                    <a href="technology.html" class="btn btn-outline-brand mt-3">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section class="section-padding bg-secondary">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h1 class="text-white mb-3">Explore Common Inquiries</h1>
+                <p class="text-white-50">
+                    Have questions? We've got answers! Browse our FAQ to learn more about our
+                    services and processes.
+                </p>
+            </div>
+
+            <div class="accordion accordion-flush shadow-sm rounded" id="faqAccordion">
+                <!-- FAQ Item -->
+                <div class="accordion-item mb-3 border rounded">
+                    <h2 class="accordion-header" id="faqHeadingOne">
+                        <button class="accordion-button fw-semibold" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#faqCollapseOne" aria-expanded="true" aria-controls="faqCollapseOne">
+                            <i class="ri-question-line me-2 text-primary"></i> What types of lithium batteries do you
+                            manufacture?
+                        </button>
+                    </h2>
+                    <div id="faqCollapseOne" class="accordion-collapse collapse show" aria-labelledby="faqHeadingOne"
+                        data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Tesson Energy manufacture a wide range of lithium battery chemistries, including LiFePO₄
+                            (LFP), NMC, and customized lithium packs suitable for Electric Vehicles (EV), Solar Energy
+                            Systems, Energy Storage Systems (ESS), Telecom & UPS, Medical Devices, Industrial
+                            applications.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item -->
+                <div class="accordion-item mb-3 border rounded">
+                    <h2 class="accordion-header" id="faqHeadingTwo">
+                        <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#faqCollapseTwo" aria-expanded="false" aria-controls="faqCollapseTwo">
+                            <i class="ri-question-line me-2 text-primary"></i> Can you provide custom battery packs?
+                            service?
+                        </button>
+                    </h2>
+                    <div id="faqCollapseTwo" class="accordion-collapse collapse" aria-labelledby="faqHeadingTwo"
+                        data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Yes, we offer custom battery pack solutions tailored to your voltage, capacity, size, and
+                            application requirements. Our engineering team will work closely with you to ensure optimal
+                            design and performance.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item -->
+                <div class="accordion-item mb-3 border rounded">
+                    <h2 class="accordion-header" id="faqHeadingThree">
+                        <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#faqCollapseThree" aria-expanded="false" aria-controls="faqCollapseThree">
+                            <i class="ri-question-line me-2 text-primary"></i> What is the typical lifespan of your
+                            lithium batteries?
+                        </button>
+                    </h2>
+                    <div id="faqCollapseThree" class="accordion-collapse collapse" aria-labelledby="faqHeadingThree"
+                        data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Our lithium batteries are designed to last 1500 to 3000 cycles (Life 5-10 years), depending
+                            on usage conditions, battery type, and maintenance.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item -->
+                <div class="accordion-item mb-3 border rounded">
+                    <h2 class="accordion-header" id="faqHeadingFour">
+                        <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#faqCollapseFour" aria-expanded="false" aria-controls="faqCollapseFour">
+                            <i class="ri-question-line me-2 text-primary"></i> How can I request a quote or sample?
+                        </button>
+                    </h2>
+                    <div id="faqCollapseFour" class="accordion-collapse collapse" aria-labelledby="faqHeadingFour"
+                        data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            You can contact us via email or inquiry form on our website. Provide your requirements
+                            (voltage, capacity, dimensions, application), and we will respond with a quote or sample
+                            options promptly.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item -->
+                <div class="accordion-item mb-3 border rounded">
+                    <h2 class="accordion-header" id="faqHeadingFive">
+                        <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#faqCollapseFive" aria-expanded="false" aria-controls="faqCollapseFive">
+                            <i class="ri-question-line me-2 text-primary"></i> Are your batteries safe and certified?
+                        </button>
+                    </h2>
+                    <div id="faqCollapseFive" class="accordion-collapse collapse" aria-labelledby="faqHeadingFive"
+                        data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Yes, we offer a standard warranty of 3 to 5 years, depending on the product and application.
+                            Extended warranties are also available upon request.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CERTIFICATES -->
+    <section class="py-5 bg-white">
+        <div class="container">
+            <div class="row text-center mb-4">
+                <div class="col">
+                    <h2 class="fw-bold">Global Standards & Certifications</h2>
+                    <p class="text-muted">Our battery packs are rigorously tested and certified for safety, efficiency,
+                        and environmental compliance.</p>
+                </div>
+            </div>
+            <div class="row text-center g-4">
+                <div class="col-md-3 col-6">
+                    <img src="assets/images/technology/ISO.png" alt="ISO" class="img-fluid w-75" />
+                </div>
+                <div class="col-md-3 col-6">
+                    <img src="assets/images/technology/RoHS.png" alt="RoHS" class="img-fluid w-75" />
+                </div>
+                <div class="col-md-3 col-6">
+                    <img src="assets/images/technology/IEC.png" alt="IEC" class="img-fluid w-75" />
+                </div>
+                <div class="col-md-3 col-6">
+                    <img src="assets/images/technology/UL.png" alt="UL" class="img-fluid w-75" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <div id="footer-area"></div>
+
+    <!-- FLOATING BUTTONS -->
+    <div id="floating-buttons-area"></div>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
@@ -99,6 +464,8 @@
         crossorigin="anonymous"></script>
 
     <!-- External JS -->
-    <script src="./js/script.js"></script>
+    <script src="/js/script.js"></script>
+
 </body>
+
 </html>
