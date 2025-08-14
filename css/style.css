@@ -350,6 +350,28 @@ footer .form-control:focus {
     border: 0;
 }
 
+/* Full-screen overlay loader */
+.overlay-loader {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 2000;
+    /* above navbar, modals, etc */
+}
+
+.overlay-loader p {
+    color: #fff;
+    font-weight: 600;
+}
+
+body.loading {
+    overflow: hidden;
+}
+
 /* ========================== INDEX PAGE ========================== */
 
 .hero-section {
@@ -511,7 +533,7 @@ footer .form-control:focus {
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     transition: background 0.3s;
 }
 
@@ -521,9 +543,17 @@ footer .form-control:focus {
 }
 
 /* Color Themes */
-.whatsapp-btn { background: #1ebe57; }
-.call-btn { background: #0d6efd; }
-.email-btn { background: #ff9800; }
+.whatsapp-btn {
+    background: #1ebe57;
+}
+
+.call-btn {
+    background: #0d6efd;
+}
+
+.email-btn {
+    background: #ff9800;
+}
 
 /* Responsive */
 @media (max-width: 768px) {
@@ -532,4 +562,15 @@ footer .form-control:focus {
         height: 45px;
         font-size: 20px;
     }
+}
+
+/* ========================== BLOGS PAGE ========================== */
+
+.blog-section {
+    padding: 60px 0;
+}
+
+.blog-img {
+    max-height: 400px;
+    object-fit: cover;
 }
