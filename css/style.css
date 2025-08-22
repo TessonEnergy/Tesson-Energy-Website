@@ -389,40 +389,11 @@ body.loading {
     object-position: center;
 }
 
-
 /* ABOUT */
-#about {
-    position: relative;
-    z-index: 1;
+.bg-video{
+    background-color: #0b1a30;
 }
 
-#about::before {
-    content: "";
-    width: 30%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: #6e6e6e;
-    /* Darker shade */
-    z-index: 0;
-}
-
-#about .container,
-#about .row,
-#about .col-lg-5,
-#about .col-lg-5 img,
-#about .col-lg-5.offset-lg-1 {
-    position: relative;
-    z-index: 1;
-}
-
-@media (max-width: 992px) {
-    #about::before {
-        height: 40%;
-        width: 100%;
-    }
-}
 
 /* OUR SOLUTIONS */
 .category-img img {
